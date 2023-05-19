@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import lego from '../../../assets/Images/lego.jpg'
 import Rating from 'react-rating';
 import { BsMoonStarsFill,BsMoonStars } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 
 
@@ -39,7 +40,7 @@ const Categories = () => {
 
 
                             <div className="card-actions">
-                                <button className="btn btn-warning">Buy Now</button>
+                                <Link to='/viewDetails'><button className="btn btn-outline btn-warning">View Details</button></Link>
                             </div>
                         </div>
                     </div>
@@ -65,7 +66,7 @@ const Categories = () => {
 
 
                             <div className="card-actions">
-                                <button className="btn btn-warning">Buy Now</button>
+                                <Link to='/viewDetails'><button className="btn btn-outline btn-warning">View Details</button></Link>
                             </div>
                         </div>
                     </div>
@@ -91,7 +92,7 @@ const Categories = () => {
 
 
                             <div className="card-actions">
-                                <button className="btn btn-warning">Buy Now</button>
+                                <Link to='/viewDetails'><button className="btn btn-outline btn-warning">View Details</button></Link>
                             </div>
                         </div>
                     </div>
@@ -118,7 +119,7 @@ const Categories = () => {
 
 
                             <div className="card-actions">
-                                <button className="btn btn-warning">Buy Now</button>
+                                <Link to='/viewDetails'><button className="btn btn-outline btn-warning">View Details</button></Link>
                             </div>
                         </div>
                     </div>

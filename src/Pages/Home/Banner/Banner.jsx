@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img1 from '../../../assets/Images/image1.jpg'
 import img2 from '../../../assets/Images/image2.jpg'
 import img3 from '../../../assets/Images/image3.jpg'
 import img4 from '../../../assets/Images/image4.jpg'
+import { AuthContext } from '../../../Provider/Provider';
 
 
 
 const Banner = () => {
+    const {user} = useContext(AuthContext);
+    console.log(user)
+
+
     return (
         <div>
             <div className="carousel w-full ">

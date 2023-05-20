@@ -13,10 +13,9 @@ const Categories = () => {
         <div className='flex justify-center items-center'>
             <Tabs>
                 <TabList>
-                    <Tab> <h3 className='text-2xl'>For Age <span className='text-sky-blue font-bold'>1-5</span> </h3> </Tab>
-                    <Tab> <h3 className='text-2xl'>For Age <span className='text-sky-blue font-bold'>5-10</span> </h3> </Tab>
-                    <Tab> <h3 className='text-2xl'>For Age <span className='text-sky-blue font-bold'>10-15</span> </h3> </Tab>
-                    <Tab> <h3 className='text-2xl'>For Age <span className='text-sky-blue font-bold'>15-20</span> </h3> </Tab>
+                    <Tab> <h3 className='text-2xl text-pink'>Engeneering<span className='text-sky-blue font-bold'> Lego</span> </h3> </Tab>
+                    <Tab> <h3 className='text-2xl text-pink'>Educational<span className='text-sky-blue font-bold'> Lego</span> </h3> </Tab>
+                    <Tab> <h3 className='text-2xl text-pink'>Bulding<span className='text-sky-blue font-bold'> Lego</span> </h3> </Tab>
 
                 </TabList>
 

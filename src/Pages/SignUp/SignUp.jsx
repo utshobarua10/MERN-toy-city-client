@@ -32,11 +32,11 @@ const SignUp = () => {
         .then(result =>{
             const user = result.user;
             updateUser(result.user,name,url)
-            .then(result=>{
+            .then(result=>{ 
                
             })
             .catch(err=>{
-                
+
             })
 
 

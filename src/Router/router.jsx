@@ -8,6 +8,9 @@ import Table from "../Pages/Home/Table/Table";
 import ViewDetails from "../Pages/Home/ViewDetails/ViewDetails";
 import SignUp from "../Pages/SignUp/SignUp";
 import Login from "../Pages/Home/Login/Login";
+import AddToy from "../Pages/AddToy/AddToy";
+import PrivateRoute from "./PrivateRoute";
+import MyToy from "../Pages/MyToy/MyToy";
   
 const router = createBrowserRouter([
     {
@@ -26,7 +29,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/viewDetails",
-          element: <ViewDetails></ViewDetails>
+          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
         },
         {
           path: '/signUp',
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
         {
           path: '/login',
           element: <Login></Login>
+        },
+        {
+          path: '/mytoy',
+          element: <PrivateRoute><MyToy></MyToy></PrivateRoute>
+        },
+        {
+          path: '/addToy',
+          element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
         }
       ],
     },

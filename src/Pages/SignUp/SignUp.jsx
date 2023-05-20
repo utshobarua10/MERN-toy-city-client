@@ -5,7 +5,7 @@ import { AuthContext } from '../../Provider/Provider';
 
 const SignUp = () => {
 
-    const { createUser,googleUser } = useContext(AuthContext&& AuthContext);
+    const { createUser,googleUser,updateUser } = useContext(AuthContext&& AuthContext);
     const [err,setErr] = useState('');
     const [success,setSuccess] = useState('');
     const handleSubmit =(event)=>{
@@ -31,6 +31,15 @@ const SignUp = () => {
         createUser(email,password)
         .then(result =>{
             const user = result.user;
+            updateUser(result.user,name,url)
+            .then(result=>{
+               
+            })
+            .catch(err=>{
+                
+            })
+
+
             setSuccess('User created successfully')
         })
         .catch(err=>{

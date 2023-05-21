@@ -14,9 +14,35 @@ const AddToy = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
         const url = form.url.value;
-        console.log(name,seller,email,category,price,rating,quantity,description,url)
+        const newToy = {
+            name,
+            seller,
+            email,
+            category,
+            price,
+            rating,
+            quantity,
+            description,
+            url
+        }
+        // console.log(newToy)
 
-        
+
+        fetch("http://localhost:5000/insertToy", {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newToy)
+
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+
+
+            
+
 
     }
 
@@ -124,7 +150,7 @@ const AddToy = () => {
 
 
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Sign In</button>
+                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Add a toy</button>
                                 </div>
                             </form>
 

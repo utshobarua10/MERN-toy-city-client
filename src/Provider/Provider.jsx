@@ -60,7 +60,8 @@ const Provider = ({children }) => {
         login,
         updateUser,
         logOut, 
-        user
+        user,
+        loading
     }
 
     return (

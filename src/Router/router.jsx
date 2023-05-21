@@ -28,8 +28,9 @@ const router = createBrowserRouter([
           element: <Table></Table>
         },
         {
-          path: "/viewDetails",
-          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
+          path: "/viewDetails/:id",
+          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
         },
         {
           path: '/signUp',

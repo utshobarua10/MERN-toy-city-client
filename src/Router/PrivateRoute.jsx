@@ -1,4 +1,4 @@
-import React, { Children, useContext } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/Provider';
 import { Navigate } from 'react-router-dom';
 
@@ -12,11 +12,15 @@ const PrivateRoute = ({children}) => {
             Processing...
         </button>
     }
+    
+    
     if(user?.email){
         return children 
     }
 
-    return <Navigate to='/login' replace></Navigate>
+    
+        // return <Navigate to='/login' replace></Navigate>
+
 
 
 };

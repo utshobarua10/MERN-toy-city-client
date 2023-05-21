@@ -1,33 +1,20 @@
 import React from 'react';
 
-const MyToy = () => {
-    const handleSubmit = (event) => {
+const Question = () => {
+    const handleSubmit =(event)=>{
         event.preventDefault();
-        const form = event.target;
-        const name = form.product.value;
-        const seller = form.seller.value;
-        const email = form.email.value;
-        const category = form.subCategory.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const quantity = form.quantity.value;
-        const description = form.description.value;
-        const url = form.url.value;
-
-
     }
-
-
+    
+    
     return (
         <div>
-
             <div className="hero min-h-screen bg-base-200">
 
 
                 <div className="hero-content ">
 
                     <div className="card  max-w-7xl shadow-2xl  bg-base-100">
-                        <h3 className='text-center text-3xl font-semibold mt-4'>Update The Product</h3>
+                        <h3 className='text-center text-3xl font-semibold mt-4'>Ask us</h3>
                         <div className="card-body ">
                             <form onSubmit={handleSubmit}>
                                 <div className='flex space-x-3'>
@@ -46,49 +33,7 @@ const MyToy = () => {
                                         <input type="text" name='seller' placeholder="Seller name" className="input input-bordered" />
                                     </div>
                                 </div>
-                                <div className='flex space-x-3'>
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Seller Email</span>
-                                        </label>
-                                        <input type="text" name="email" placeholder="Seller email" className="input input-bordered" />
-                                    </div>
-
-
-
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Sub Category</span>
-                                        </label>
-                                        <select name='subCategory' className="select select-bordered w-full max-w-xl">
-                                            <option disabled selected>Select A Category</option>
-                                            <option>Educational Lego</option>
-                                            <option>Engeneering Lego</option>
-                                            <option>Building  Lego</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-
-                                <div className='flex space-x-3'>
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Price</span>
-                                        </label>
-                                        <input type="text" name='price' placeholder="price" className="input input-bordered" />
-
-                                    </div>
-
-
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Rating</span>
-                                        </label>
-                                        <input type="text" name='rating' placeholder="rating" className="input input-bordered" />
-
-                                    </div>
-                                </div>
-
+                                
 
                                 <div className='flex space-x-3'>
                                     <div className="form-control">
@@ -121,7 +66,7 @@ const MyToy = () => {
 
 
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Update The toy</button>
+                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Add a toy</button>
                                 </div>
                             </form>
 
@@ -137,4 +82,4 @@ const MyToy = () => {
     );
 };
 
-export default MyToy;
+export default Question;

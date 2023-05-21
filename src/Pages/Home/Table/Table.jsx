@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Table = () => {
+
+    const [toys, setToys] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/allToys')
+            .then(res => res.json())
+            .then(data => setToys(data))
+    }, [])
+
+    let i = 1;
+
+    console.log(toys)
+
+
+
+
     return (
         <div>
+
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
@@ -19,35 +36,20 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr>
-                            <th>1</th>
-                            <td>Vin Diesel</td>
-                            <td>Lego Car</td>
-                            <td>Lego</td>
-                            <td>$1000 </td>
-                            <td>  5 </td>
-                            <td className='text-pink'><Link to='/viewDetails'>View Details</Link></td>
-                        </tr>
-                        {/* row 2 */}
-                        <tr>
-                            <th>2</th>
-                            <td>Vin Diesel</td>
-                            <td>Lego Car</td>
-                            <td>Lego</td>
-                            <td>$1000 </td>
-                            <td>5 </td>
-                            <td className='text-pink'><Link to='/viewDetails'>View Details</Link></td>
-                        </tr>
-                        {/* row 3 */}
-                        <tr>
-                            <th>3</th>                            <td>Vin Diesel</td>
-                            <td>Lego Car</td>
-                            <td>Lego</td>
-                            <td>$1000 </td>
-                            <td>5 </td>
-                            <td className='text-pink'><Link to='/viewDetails'>View Details</Link></td>
-                        </tr>
+                        {   
+                            toys.map(toy =>
+                                <tr>
+                                
+                                    <th>{i++}</th>
+                                    <td>{toy.seller}</td>
+                                    <td>{toy.name}</td>
+                                    <td>{toy.category}</td>
+                                    <td>${toy.price} </td>
+                                    <td> {toy.quantity} </td>
+                                    <td className='text-pink'><Link to='/viewDetails'>View Details</Link></td>
+                                </tr>
+                            )
+                        }
                     </tbody>
                 </table>
             </div>

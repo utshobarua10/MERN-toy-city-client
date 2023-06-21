@@ -1,6 +1,12 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const MyToy = () => {
+
+
+    const data = useLoaderData();
+    console.log(data.name)
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -13,10 +19,37 @@ const MyToy = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
         const url = form.url.value;
+        const updatedData = {
+            name,
+            seller,
+            email,
+            category,
+            price,
+            rating,
+            quantity,
+            description,
+            url,
+            
+       
+        }
+        
+
+
+        fetch(`http://localhost:5000/updateToy/${data._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedData)
+
+        })
+            .then(res => res.json())
+            .then(data => console.log(updatedData))
 
 
     }
-
+ 
+    
 
     return (
         <div>
@@ -35,7 +68,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Name</span>
                                         </label>
-                                        <input type="text" name='product' placeholder="Product Name" className="input input-bordered" />
+                                        <input type="text" name='product' defaultValue={data.name} placeholder="Product Name" className="input input-bordered" />
                                     </div>
 
 
@@ -43,7 +76,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Seller Name</span>
                                         </label>
-                                        <input type="text" name='seller' placeholder="Seller name" className="input input-bordered" />
+                                        <input type="text" name='seller' defaultValue={data.seller} placeholder="Seller name" className="input input-bordered" />
                                     </div>
                                 </div>
                                 <div className='flex space-x-3'>
@@ -51,7 +84,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Seller Email</span>
                                         </label>
-                                        <input type="text" name="email" placeholder="Seller email" className="input input-bordered" />
+                                        <input type="text" name="email" placeholder="Seller email" defaultValue={data.email} className="input input-bordered" />
                                     </div>
 
 
@@ -61,7 +94,7 @@ const MyToy = () => {
                                             <span className="label-text">Sub Category</span>
                                         </label>
                                         <select name='subCategory' className="select select-bordered w-full max-w-xl">
-                                            <option disabled selected>Select A Category</option>
+                                            <option disabled selected>{data.category}</option>
                                             <option>Educational Lego</option>
                                             <option>Engeneering Lego</option>
                                             <option>Building  Lego</option>
@@ -75,7 +108,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Price</span>
                                         </label>
-                                        <input type="text" name='price' placeholder="price" className="input input-bordered" />
+                                        <input type="text" name='price' defaultValue={data.price} placeholder="price" className="input input-bordered" />
 
                                     </div>
 
@@ -84,7 +117,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Rating</span>
                                         </label>
-                                        <input type="text" name='rating' placeholder="rating" className="input input-bordered" />
+                                        <input type="text" name='rating' defaultValue={data.rating} placeholder="rating" className="input input-bordered" />
 
                                     </div>
                                 </div>
@@ -95,7 +128,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Available Quantity</span>
                                         </label>
-                                        <input type="text" name='quantity' placeholder="available quantity" className="input input-bordered" />
+                                        <input type="text" name='quantity' defaultValue={data.quantity}  placeholder="available quantity" className="input input-bordered" />
 
                                     </div>
 
@@ -104,7 +137,7 @@ const MyToy = () => {
                                         <label className="label">
                                             <span className="label-text">Detail Description</span>
                                         </label>
-                                        <input type="text" name='description' placeholder="description" className="input input-bordered" />
+                                        <input type="text" defaultValue={data.description} name='description' placeholder="description" className="input input-bordered" />
 
                                     </div>
                                 </div>
@@ -114,7 +147,7 @@ const MyToy = () => {
                                     <label className="label">
                                         <span className="label-text">Picture URL</span>
                                     </label>
-                                    <input type="text" name='url' placeholder="picture url" className="input input-bordered" />
+                                    <input type="text" name='url' defaultValue={data.url}  placeholder="picture url" className="input input-bordered" />
 
                                 </div>
 

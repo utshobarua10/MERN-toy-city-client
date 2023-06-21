@@ -3,7 +3,7 @@ import lego from '../../../assets/Images/lego.jpg'
 import { useLoaderData, useLocation } from 'react-router-dom';
 const ViewDetails = () => {
     const data = useLoaderData()
-    console.log(data.name)
+    console.log(data)
 
 
     return (

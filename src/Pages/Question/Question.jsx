@@ -20,53 +20,36 @@ const Question = () => {
                                 <div className='flex space-x-3'>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Name</span>
+                                            <span className="label-text">Your Name</span>
                                         </label>
-                                        <input type="text" name='product' placeholder="Product Name" className="input input-bordered" />
+                                        <input type="text" name='product' placeholder="Your Name" className="input input-bordered" />
                                     </div>
 
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Seller Name</span>
+                                            <span className="label-text">Phone Number</span>
                                         </label>
-                                        <input type="text" name='seller' placeholder="Seller name" className="input input-bordered" />
+                                        <input type="text" name='seller' placeholder="Phone Number" className="input input-bordered" />
                                     </div>
                                 </div>
                                 
 
-                                <div className='flex space-x-3'>
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Available Quantity</span>
-                                        </label>
-                                        <input type="text" name='quantity' placeholder="available quantity" className="input input-bordered" />
-
-                                    </div>
-
-
-                                    <div className="form-control">
-                                        <label className="label">
-                                            <span className="label-text">Detail Description</span>
-                                        </label>
-                                        <input type="text" name='description' placeholder="description" className="input input-bordered" />
-
-                                    </div>
-                                </div>
+                              
 
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Picture URL</span>
+                                        <span className="label-text">Detail description</span>
                                     </label>
-                                    <input type="text" name='url' placeholder="picture url" className="input input-bordered" />
+                                    <input type="text" name='url' placeholder="details" className="input input-bordered" />
 
                                 </div>
 
 
 
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Add a toy</button>
+                                    <button className="btn btn-primary bg-pink border-none" type='submit'>Send Us</button>
                                 </div>
                             </form>
 

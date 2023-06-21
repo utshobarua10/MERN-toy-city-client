@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const navItems = <>
         <Link to='/'><li><a className='text-white'>Home</a></li></Link>
-        <Link to='/allToys'><li> <a className='text-white'>All Toys</a> </li></Link>
+        <Link to={`/allToys/seller/${user && user.uid}`}><li> <a className='text-white'>All Toys</a> </li></Link>
         <Link to='/addToy'><li> <a className='text-white'> Add A Toy</a></li></Link>
         <Link to='/myToy'><li> <a className='text-white'> My Toy</a></li></Link>
         <Link to='/blogs'><li> <a className='text-white'>Blogs</a> </li></Link>

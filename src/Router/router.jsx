@@ -12,6 +12,7 @@ import AddToy from "../Pages/AddToy/AddToy";
 import PrivateRoute from "./PrivateRoute";
 import MyToy from "../Pages/MyToy/MyToy";
 import Blogs from "../Pages/Blogs/Blogs";
+import NotFound from "../Pages/NotFound/NotFound";
   
 const router = createBrowserRouter([
     {
@@ -55,10 +56,15 @@ const router = createBrowserRouter([
         {
           path: '/blogs',
           element: <Blogs></Blogs>
-        }
+        },
+
        
       ],
     },
+    {
+      path: '*',
+      element: <NotFound></NotFound>
+    }
   ]);
   
   export default router;

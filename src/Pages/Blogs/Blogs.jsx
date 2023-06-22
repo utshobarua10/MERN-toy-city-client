@@ -10,9 +10,22 @@ const Blogs = () => {
              </p>
         <br />
             <p> <b>Question 2:</b> Compare SQL and NoSQL databases?</p>            
-            <p> <b>Ans: </b> SQL: Full formed of SQl structured query language and NoSQL is not sql only, SQL is basically a realtional database where a column could be connect with one or more table
+            <p> <b>Ans: </b> SQL: Full formed of SQl structured query language and NoSQL is not sql only, 
+            <br />SQL is basically a realtional database where a column could be connect with one or more table
             <br /> On the other side, NOSQl is not relational database here a single block of data represents alone and the database typically not connected with the other databases
              </p>
+        <br />
+
+             <p> <b>Question 3:</b> What is express js? What is Nest JS?</p>            
+            <p> <b>Ans: </b> Express js is a web application framework for node js and this framework is widely used by the developer all over the world.And it is built it JS 
+                <br /> And Nest js is a progressive framework and it is built with typescript, this framework is getting among the developers.
+            </p>
+            
+            <br />
+            <p> <b>Question 4:</b> What is MongoDB aggregate and how does it work</p>            
+            <p> <b>Ans: </b> MongoDB aggregate is a powerful way to perform advanced analytical operation like - match, group, project, sort and many more.
+            </p>
+            
 
         </div>
     );

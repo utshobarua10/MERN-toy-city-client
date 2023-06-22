@@ -19,7 +19,7 @@ const PrivateRoute = ({children}) => {
     }
 
     
-        // return <Navigate to='/login' replace></Navigate>
+        return <Navigate to='/login' replace></Navigate>
 
 
 

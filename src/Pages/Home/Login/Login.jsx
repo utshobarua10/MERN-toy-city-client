@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../Provider/Provider';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [err,setErr] = useState('');
@@ -55,6 +56,10 @@ const Login = () => {
                                     <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                    <label className="label">
+                                        <Link to="/signup"><a href="#" className="label-text-alt link link-hover">Don't have an account? Create Now!!</a></Link>
+                                    
                                     </label>
                                 </div>
 
